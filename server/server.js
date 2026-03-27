@@ -5,13 +5,7 @@ import router from './routes/user.js';
 
 const app = express();
 
-app.use(cors({
-  origin: [
-    "https://demo-yj8n.vercel.app"
-  ],
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true
-}));
+app.use(cors());
 app.use(express.json());
 
 connectDb();
