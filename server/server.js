@@ -4,7 +4,6 @@ import { connectDb } from './db/db.js';
 import router from './routes/user.js';
 
 const app = express();
-app.use(express.json());
 
 app.use(cors({
   origin: [
@@ -13,6 +12,8 @@ app.use(cors({
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
+app.use(express.json());
+
 connectDb();
 
 app.use('/api/user', router)
