@@ -77,7 +77,7 @@ function Form() {
           </h3>
 
           <div className="space-y-3 max-h-[400px] overflow-y-auto pr-2">
-            {users.map((user, index) => (
+            {users?.map((user, index) => (
               <div
                 key={user._id || index}
                 className="p-4 bg-gray-100 rounded-lg flex flex-col shadow-sm"
