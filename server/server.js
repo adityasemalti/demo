@@ -4,9 +4,15 @@ import { connectDb } from './db/db.js';
 import router from './routes/user.js';
 
 const app = express();
-app.use(cors());
 app.use(express.json());
 
+app.use(cors({
+  origin: [
+    "https://demo-yj8n.vercel.app"
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 connectDb();
 
 app.use('/api/user', router)
