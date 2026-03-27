@@ -8,7 +8,9 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/api/user', router)
-
+app.get('/',(req,res)=>{
+  res.send("api running")
+})
 
 connectDb();
 app.listen(5000, () => {
