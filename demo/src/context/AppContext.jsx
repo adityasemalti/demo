@@ -2,7 +2,7 @@ import { createContext, useState } from "react";
 import axios from "axios";
 
 export const AppContext = createContext();
-const url = "http://localhost:5000/api/user";
+const url = "https://demo-gold-delta-75.vercel.app/api/user";
 
 export const AppProvider = ({ children }) => {
   const getAllUsers = async () => {
